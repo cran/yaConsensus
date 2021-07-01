@@ -1,0 +1,13 @@
+useDynLib(yaConsensus, .registration = TRUE)
+importFrom("grDevices", "colorRampPalette", "colors", "palette")
+importFrom("stats", "as.dist", "cutree", "dist", "hclust")
+import("foreach")
+import("pheatmap")
+import("doParallel")
+export(yaConsensus, consensus.diss)
+S3method(plot,  yaConsensus)
+S3method(print,  yaConsensus)
+S3method(summary,  yaConsensus)
+S3method(print,  yaConsensus_plot)
+S3method(summary,  yaConsensus_plot)
+
