@@ -14,6 +14,12 @@ function(object, given = NULL, ...) {
     results$'entropy consensus precision' <- paste0(round(100 * tmp[2], 2), "%")
     results$'entropy consensus (average)' <- paste0(round(100 * tmp[3], 2), "%")
     
+    tt <- table(object$annotation$consensus, object$annotation[, wwhich])
+    tt <- tt[, apply(tt, 1, which.max)]
+    tmp <- 1. - sum(diag(tt))/sum(tt)
+    results$'misallocation rate' <- paste0(round(100 * tmp, 2), "%")
+    
+    names(results)[length(results)-3] <- paste0(names(results)[length(results)-3], ", given ", given[j], ": ")
     names(results)[length(results)-2] <- paste0(names(results)[length(results)-2], ", given ", given[j], ": ")
     names(results)[length(results)-1] <- paste0(names(results)[length(results)-1], ", given ", given[j], ": ")
     names(results)[length(results)] <- paste0(names(results)[length(results)], ", given ", given[j], ": ")

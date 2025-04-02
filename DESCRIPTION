@@ -1,8 +1,8 @@
 Package: yaConsensus
 Type: Package
 Title: Consensus Clustering of Omic Data
-Version: 1.0
-Date: 2021-06-30
+Version: 1.1
+Date: 2025-04-01
 Authors@R: 
         person(given = "Stefano Maria",
                family = "Pagnotta",
@@ -15,9 +15,9 @@ Depends: R (>= 4.1.0), foreach (>= 1.5.1), pheatmap (>= 1.0.12),
 License: MIT + file LICENSE
 URL: https://github.com/stefanoMP/yaConsensus
 NeedsCompilation: yes
-Packaged: 2021-06-30 13:19:29 UTC; stefano
+Packaged: 2025-04-01 14:12:45 UTC; stefano
 Author: Stefano Maria Pagnotta [aut, cre, cph]
     (<https://orcid.org/0000-0002-8298-9777>)
 Maintainer: Stefano Maria Pagnotta <pagnotta@unisannio.it>
 Repository: CRAN
-Date/Publication: 2021-07-01 07:40:01 UTC
+Date/Publication: 2025-04-02 16:00:02 UTC

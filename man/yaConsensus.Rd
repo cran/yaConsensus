@@ -72,7 +72,7 @@ The plot function in the example provides an invisible result with detail ans st
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{\code{\link{dist}}, \code{\link{hclust}}, \code{\link{doParallel}}
+\seealso{\code{\link{dist}}, \code{\link{hclust}}, \code{\link[doParallel:doParallel]{doParallel::doParallel()}}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{

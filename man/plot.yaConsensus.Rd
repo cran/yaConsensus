@@ -10,8 +10,10 @@ This function processes the ouput of yaConsensus and acts as a wrapper to the ph
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-\method{plot}{yaConsensus}(x, G = 2, annotation = NULL, annotation.colorCode = NULL, 
-     matching_clustering = NULL, consensus_colors = NULL,...)
+\method{plot}{yaConsensus}(x, G = 2, 
+                            annotation = NULL, annotation.colorCode = NULL, 
+                            matching_clustering = NULL, consensus_colors = NULL, 
+                            reduce_to = -1, main = NULL, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -33,11 +35,18 @@ This function processes the ouput of yaConsensus and acts as a wrapper to the ph
   \item{consensus_colors}{a list of color provided to annotate the consensus clustering. If provided, the matching_clustering is overrided.
 %%     ~~Describe \code{G} here~~
 }
+  \item{reduce_to}{an integer value; default = -1 means all samples are included in the graphical representation; a value greater than 10 forces the graphical output to show 'reduce_to' number of brahch of the consensusu dendrogram. See also detail.
+%%     ~~Describe \code{G} here~~
+}
+  \item{main}{a main title for the plot; default is NULL (no title).
+}
   \item{\dots}{parameters compatible with pheatmap function. 
 %%     ~~Describe \code{\dots} here~~
 }
 }
 \details{In the slot 'statistics', the function returns the same statistics of yaConsensus().
+
+If the consensus analysis concerns single-cell, the'reduce_to' parameter has to be set to 500 (suggestion), given that the number of cells is often thousands. In this case, the original annotation is compressed to the number of items displayed.  If the consensus color annotation has to match an existing a-priori coloring code, the match is computed concerning the unreduced annotation. 
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
@@ -65,7 +74,7 @@ The variable specified as given in summary(..., given = "some clustering") is as
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{pheatmap}}, \code{\link{yaConsensus}}
+\code{\link[pheatmap:pheatmap]{pheatmap::pheatmap()}}, \code{\link{yaConsensus}}
 }
 \examples{
 # see the examples in yaConsensus help.
